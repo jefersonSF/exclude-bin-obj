@@ -1,0 +1,62 @@
+## ==========================================
+## Build & Output Directories (.NET / C#)
+## ==========================================
+[Bb]in/
+[Oo]bj/
+[LGs]og/
+[Lgs]ogs/
+out/
+publish/
+
+## ==========================================
+## Visual Studio / IDEs
+## ==========================================
+# Arquivos de usuário e configurações locais
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# Pasta oculta do Visual Studio
+.vs/
+
+# JetBrains Rider / ReSharper
+.idea/
+*_ReSharper*/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+## ==========================================
+## NuGet & Dependencies
+## ==========================================
+*.nupkg
+*.snupkg
+# Se você usar restauração de pacotes local
+**/packages/
+!**/packages/build/
+project.lock.json
+project.assets.json
+
+## ==========================================
+## Testes, Cobertura e Logs
+## ==========================================
+TestResults/
+*.received.*
+*.verified.*
+*.coverage
+*.coveragexml
+
+## ==========================================
+## Outros (SO e Arquivos Temporários)
+## ==========================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
