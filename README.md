@@ -40,7 +40,11 @@ dotnet publish -c Release -r win-x64 --self-contained
 ```
 ### 2. Rode o executável
 
-Rode o executável na pasta do projeto onde quer limpar as pastas bin e obj. 
+Rode o executável na pasta do projeto onde quer limpar as pastas bin e obj. Ex: 
+```bash
+PS D:\Projetos-tools\MonitorMobile> binobj.exe
+```
+Após termino da execução, todas as pastas **bin** e **obj** no diretório atual (D:\Projetos-tools\MonitorMobile) e subdiretórios, terão sido excluídas.
 
 ---
 ## 💡 Dicas de uso
