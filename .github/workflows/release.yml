@@ -23,7 +23,7 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore ./ExcludeBinObj.csproj
+        run: dotnet restore ./ExcludeBinObj.csproj --runtime win-x64
 
       - name: Build application
         run: |
