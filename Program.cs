@@ -36,8 +36,15 @@ try
     DeleteBinAndObjFolders(currentDirectory);
 
     Console.WriteLine("\nOperation completed successfully.");
-} catch (Exception ex) {
+}
+catch (Exception ex)
+{
     Console.WriteLine($"\nAn error occurred: {ex.Message}");
+}
+finally {
+    Console.WriteLine($"\nFinished processing directory: {currentDirectory}");
+    Console.WriteLine("Press ENTER to close");
+    Console.ReadLine();
 }
 
 static void DeleteBinAndObjFolders(string directoryPath)
@@ -67,10 +74,5 @@ static void DeleteBinAndObjFolders(string directoryPath)
     catch (Exception ex)
     {
         Console.WriteLine($"\nAn error occurred while deleting folders in {directoryPath}: {ex.Message}");
-    }
-    finally { 
-        Console.WriteLine($"\nFinished processing directory: {directoryPath}");
-        Console.WriteLine("Press ENTER to close");
-        Console.ReadLine();
     }
 }
