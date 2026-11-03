@@ -12,6 +12,7 @@ string header = ""+ "===========================================================
 
 const string orientationBaseConfirmCancel = "Please press Y to confirm, or N to cancel";
 Console.WriteLine(header);
+Console.WriteLine($"Current directory: {currentDirectory}");
 Console.WriteLine(orientationBaseConfirmCancel);
 char userInput;
 do
@@ -49,7 +50,8 @@ static void DeleteBinAndObjFolders(string directoryPath)
             string folderName = Path.GetFileName(subDirectory);
             if (folderName == "bin" || folderName == "obj")
             {
-                if (!Directory.GetFiles(directoryPath).Any(x => x.EndsWith(".csproj"))) { 
+                if (!Directory.GetFiles(directoryPath).Any(x => x.EndsWith(".csproj")))
+                {
                     Console.WriteLine($"\nSkipping deletion of {subDirectory} because it contains a corresponding .csproj file.");
                     continue;
                 }
@@ -65,5 +67,10 @@ static void DeleteBinAndObjFolders(string directoryPath)
     catch (Exception ex)
     {
         Console.WriteLine($"\nAn error occurred while deleting folders in {directoryPath}: {ex.Message}");
+    }
+    finally { 
+        Console.WriteLine($"\nFinished processing directory: {directoryPath}");
+        Console.WriteLine("Press ENTER to close");
+        Console.ReadLine();
     }
 }
