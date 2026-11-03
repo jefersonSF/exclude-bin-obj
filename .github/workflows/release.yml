@@ -35,6 +35,7 @@ jobs:
         run: |
           dotnet publish ./ExcludeBinObj.csproj \
           --configuration Release \
+          --runtime win-x64 \
           --no-build \
           --output ./publish
 
